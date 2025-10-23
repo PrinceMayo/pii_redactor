@@ -1,2 +1,30 @@
-[NAME] lives at [ADDRESS]. You can contact him at [EMAIL]
- or call him on his phone number, ###-###-####. His social security number is ***_**_****. Yesterday, he visited Dr. [NAME] at Springfield Medical Center, whose email is [EMAIL] Payment details include credit card number #### #### #### #### and bank account #########.
+[NAME][ADDRESS]  
+Phone: [PHONE]  
+Alt: [PHONE]  
+Email: [EMAIL]  
+SSN: [SSN]  
+Driver's License: [DRIVER LICENSE #]  
+Date of Birth: [DATE]  
+Credit Card: [CREDIT/DEBIT CARD]  
+Bank Account: [BANK ACCOUNT]  
+Routing No: [BANK ACCOUNT]  
+License Plate: [LICENSE PLATE #]  
+[PASSPORT #]  
+VIN: [VIN]  
+IPv4: [ipv4]  
+IPv6: [ipv6]  
+MAC: [MAC]  
+
+Employee ID: [DRIVER LICENSE #]  
+Student ID: A[DRIVER LICENSE #]5  
+MRN: M-[DRIVER LICENSE #]  
+Policy #: AB[BANK ACCOUNT]  
+Professional License: TX[DRIVER LICENSE #]  
+
+[NAME] lives at [ADDRESS].  
+Her phone number is [PHONE] and her email is [EMAIL]  
+Her [PASSPORT #], and her VIN is [VIN].  
+Another contact IP is [ipv4] and her MAC address is [MAC].  
+She owns a car with license plate 8A[DRIVER LICENSE #].  
+
+Please process this document carefully and redact all personally identifiable information.

@@ -1,2 +1,31 @@
-John Smith lives at 123 Maple Street, Springfield, IL 62704. You can contact him at john.smith@email.com
- or call him on his phone number, (555) 123-4567. His social security number is 987-65-4321. Yesterday, he visited Dr. Emily Johnson at Springfield Medical Center, whose email is emily.johnson@hospital.org. Payment details include credit card number 4111 1111 1111 1111 and bank account 123456789.
+John A. Doe  
+123 Main Street, Dallas, TX 75201  
+Phone: (214) 555-7890  
+Alt: 214-555-9876  
+Email: john.doe@example.com  
+SSN: 123-45-6789  
+Driver's License: 1234567  
+Date of Birth: 05/14/1999  
+Credit Card: 1234 5678 9012 3456  
+Bank Account: 987654321  
+Routing No: 111000025  
+License Plate: ABC1234  
+Passport: Z12345678  
+VIN: 1HGCM82633A004352  
+IPv4: 192.168.1.25  
+IPv6: 2001:0db8:85a3:0000:0000:8a2e:0370:7334  
+MAC: 00:1A:2B:3C:4D:5E  
+
+Employee ID: E12345  
+Student ID: A00098765  
+MRN: M-1234567  
+Policy #: AB123456789  
+Professional License: TX9876543  
+
+Jane Smith lives at 789 Oak Ave, Austin, TX 73301.  
+Her phone number is 512 555 1234 and her email is jane.smith99@mailservice.org.  
+Her passport number is A12345678, and her VIN is 3HGFA16598L123456.  
+Another contact IP is 10.0.0.55 and her MAC address is 11:22:33:44:55:66.  
+She owns a car with license plate 8ABC123.  
+
+Please process this document carefully and redact all personally identifiable information.
