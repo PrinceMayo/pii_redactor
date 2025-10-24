@@ -27,6 +27,22 @@ with open('PII_Redaction.txt', 'r') as file:                            # Change
     # [-\s]? - Can choose one or none of the symbols (dash or space) to go in between groupings of numbers
     # [0-9]{4} - Exactly 4 numbers in range of 0-9
     phone_pattern = r'\(?[0-9]{3}\)?[-\s]?[0-9]{3}[-\s]?[0-9]{4}'
+
+    # Matches Zip Code with potential for Zip+4 Code for US Format
+    # ^ - Signifies the start of the string
+    # \d{5} - Traditional 5 Digit Zipcode, exactly 5 numbers in range of 0-9
+    # ( - Grouping for potential Zip+4 code that may or may not be present
+    # - - Zip+4 is preceded by a dash
+    # \d{4} - Additional 4 numerical digits, exactly 4 numbers in range of 0-9
+    # )? - Check if grouping of 4 digits preceded by a dash is present
+    # $ - End of string
+    zip_code = r'^\d{5}(-\d{4})?$'
+
+    # Matches City, State Abbreviation typically used to denote location
+    # [a-zA-Z]+ - Repeated one or more times: Any lowercase/uppercase letter 
+    # \,\s - Looking for a literal ',' and ' ' before next grouping of characters
+    # [A-Z]{2} - Two Uppercase letters signifying State abbreviation
+    location_data = r'[a-zA-Z]+\,\s[A-Z]{2}'
     
     # Macthes SSN
     # [0-9]{3} - Exactly 3 numbers in range of 0-9
