@@ -11,6 +11,33 @@ def pii_redactor(input_path, output_path):
         doc = nlp(content)
         names = [ent.text for ent in doc.ents if ent.label_ == "PERSON"]
 
+        # Matches Date of Birth in US Format
+        # ^ - Start of String
+        # \d{1,2} - Month, exactly 1-2 numbers
+        # \/ - Demarking the break between month and day
+        # \d{1,2} - Day, exactly 1-2 numbers
+        # \/ - Demarking the break between day and year
+        # \d{4} - Year, exactly 4 numbers
+        # $ - End of String
+        date_of_birth = r"^\d{1,2}\/\d{1,2}\/\d{2,4}$"
+
+        # Matches Zip Code with potential for Zip+4 Code for US Format
+        # ^ - Signifies the start of the string
+        # \d{5} - Traditional 5 Digit Zipcode, exactly 5 numbers in range of 0-9
+        # ( - Grouping for potential Zip+4 code that may or may not be present
+        # - - Zip+4 is preceded by a dash
+        # \d{4} - Additional 4 numerical digits, exactly 4 numbers in range of 0-9
+        # )? - Check if grouping of 4 digits preceded by a dash is present
+        # $ - End of string
+        zip_code = r"^\d{5}(-\d{4})?$"
+
+        # Matches City, State Abbreviation typically used to denote location
+        # ([a-zA-Z0-9\s]+\,\s)? - Street address information check, possibly not there so it is given a ()? to check for its presence
+        # [a-zA-Z\s]+ - Repeated one or more times: Any lowercase/uppercase letter 
+        # \,\s - Looking for a literal ',' and ' ' before next grouping of characters
+        # [a-zA-Z]{2} - Two Uppercase letters signifying State abbreviation
+        location_data = r"([a-zA-Z0-9\s]+\,\s)?[a-zA-Z\s]+\,\s[a-zA-Z]{2}"
+        
         # Matches Emails 
         # [a-zA-Z0-9_.+-]+ - Repeated one or more times: Any lowercase/capital letter, number, underscore, period, plus sign, and dash
         # @ - Symbol splitting local part and domain 
